@@ -1,0 +1,140 @@
+.container {
+    padding-left: var(--margin-distance);
+    padding-right: var(--margin-distance);
+    margin-top: 40px;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+        line-height: 18px;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #757575;
+        letter-spacing: 4px;
+
+        &.shine {
+            background: linear-gradient(to right,
+                    hsl(0, 0%, 30%) 0%,
+                    hsl(0, 0%, 100%) 20%,
+                    hsl(0, 0%, 30%) 0%,
+                );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine .8s 1 ease-out;
+        }
+    }
+
+    .items {
+        display: flex;
+        align-items: center;
+
+        &>* {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            margin-right: 16px;
+            cursor: pointer;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            position: relative;
+
+            &:hover {
+                color: #757575;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &>* {
+                margin-right: 8px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.items {
+    .dropdown {
+        width: 200px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 28px;
+        right: 10px;
+        background-color: var(--white);
+        border-radius: 20px;
+        cursor: default;
+        transition: max-height 0.2s linear;
+        overflow: hidden;
+        z-index: 1;
+
+        button {
+            padding: 4px 16px;
+            font-size: 1.6rem;
+            text-align: right;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: var(--text-color);
+
+            &:hover {
+                color: #757575;
+            }
+
+            &:first-child {
+                margin-top: 18px;
+            }
+
+            &:last-child {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    span {
+        user-select: none;
+    }
+}
+
+.wrap {
+    display: flex;
+    margin-top: 24px;
+}
+
+.content {
+    flex: 1;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    * {
+        width: 100%;
+        height: 100%;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Animation
+@keyframes shine {
+    0% {
+        background-position: -60px;
+    }
+
+    100% {
+        background-position: 400px;
+    }
+}

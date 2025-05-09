@@ -1,0 +1,94 @@
+.wrap {
+	max-width: 360px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 16px;
+
+	.logo {
+		height: 43px;
+		background-size: cover;
+	}
+}
+
+.content {
+	.title {
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 2.4rem;
+		text-align: center;
+		margin-top: 32px;
+	}
+
+	.form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.tutorial {
+		margin-top: 32px;
+		font-size: 1.6rem;
+		color: var(#757575);
+		text-align: center;
+		line-height: 2rem;
+	}
+
+	.return {
+		margin-top: 32px;
+		font-size: 1.2rem;
+		color: var(#757575);
+		text-align: center;
+
+		button {
+			color: var(--text-color);
+			text-decoration: underline;
+		}
+	}
+}
+.form {
+	.input {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+
+	input {
+		width: 100%;
+		padding: 8px;
+		font-size: 1.6rem;
+		color: var(--text-color);
+		margin-bottom: 12px;
+		outline: none;
+		border: 1px solid var(--border-color);
+		border-radius: 3px;
+		
+		&:last-child {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.input-password {
+		position: relative;
+
+		.icon {
+			position: absolute;
+			top: 40%;
+			right: 0;
+			transform: translateY(-50%);
+			cursor: pointer;
+			padding: 8px;
+			color: #757575;
+		}
+	}
+
+	.submit {
+		width: 100%;
+		font-size: 2rem;
+		background-color: var(--black);
+		color: var(--white);
+		padding: 12px;
+		border-radius: 3px;
+	}
+}

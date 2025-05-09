@@ -1,0 +1,42 @@
+.wrap {
+    width: 300px;
+    min-height: 40px;
+    position: fixed;
+    top: 100px;
+    right: 12px;
+    padding: 16px;
+    flex: 1.6rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.8rem;
+    animation: fadeIn .2s ease-out 1 forwards;
+
+    .icon {
+        font-size: 3rem;
+        margin-right: 16px;
+    }
+
+    .content {
+        color: var(--white);
+        flex: 1;
+        // padding-right: 16px;
+    }
+
+    .close {
+        margin-left: 16px;
+        cursor: pointer;
+        color: var(--gray);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        right: -300px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 12px;
+        opacity: 1;
+    }
+}

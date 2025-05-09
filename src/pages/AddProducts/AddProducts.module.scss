@@ -1,0 +1,146 @@
+.wrap {
+    width: 100%;
+
+    .title {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+}
+
+.content {
+    * {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    label {
+        cursor: pointer;
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 1.6rem;
+        flex: 1;
+    }
+
+    select {
+        padding: 8px;
+        cursor: pointer;
+        font-size: 1.6rem;
+        outline: none;
+
+        option {
+            padding: 16px 0;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 300px;
+        font-size: 1.6rem;
+        outline: none;
+        padding: 8px;
+        line-height: 1.8rem;
+    }
+
+    .image-wrap {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 8px;
+    }
+
+    .input-has-btn {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .default {
+            width: 100%;
+            display: flex;
+        }
+
+        input {
+            width: 100px;
+        }
+
+        .icon {
+            height: 38px;
+            padding: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+            border: 1px solid #4f4f4f;
+            font-size: 1.6rem;
+            color: #666;
+            margin-left: 8px;
+            border-radius: 2px;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+        .items {
+            width: 80%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                height: 40px;
+                font-size: 1.6rem;
+                display: flex;
+                align-items: center;
+                padding: 8px;
+
+                * {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    color: var(--text-color);
+                }
+
+                label {
+                    margin: 0;
+                    margin-left: 8px;
+                    margin-right: 8px;
+                }
+
+                select {
+                    margin-right: 8px;
+                }
+
+                .color {
+                    flex: 1;
+                    background-color: transparent;
+                    border: 8px solid;
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+
+    .submit {
+        padding: 16px;
+        width: 100%;
+        font-size: 2rem;
+        background-color: var(--black);
+        color: var(--white);
+        margin-top: 12px;
+
+        &:hover {
+            background-color: #333;
+        }
+    }
+}

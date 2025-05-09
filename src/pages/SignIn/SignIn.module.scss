@@ -1,0 +1,210 @@
+.wrap {
+	max-width: 360px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 16px;
+
+	.logo {
+		height: 43px;
+		background-size: cover;
+	}
+}
+
+.content {
+	.title {
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 2.4rem;
+		text-align: center;
+		margin-top: 32px;
+	}
+
+	.form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tutorial {
+		margin-top: 32px;
+		font-size: 1.6rem;
+		color: var(#757575);
+		text-align: center;
+		line-height: 2rem;
+	}
+
+	.return {
+		margin-top: 32px;
+		font-size: 1.2rem;
+		color: var(#757575);
+		text-align: center;
+
+		button {
+			color: var(--text-color);
+			text-decoration: underline;
+		}
+	}
+}
+
+.form {
+	.input {
+		margin-top: 32px;
+		margin-bottom: 32px;
+
+		.message {
+			font-size: 1.2rem;
+			color: var(--warning-text-color);
+		}
+	}
+
+	input {
+		width: 100%;
+		padding: 8px;
+		font-size: 1.6rem;
+		color: var(--text-color);
+		margin-bottom: 12px;
+		outline: none;
+		border: 1px solid var(--border-color);
+		border-radius: 3px;
+
+		&:last-child {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.input-password {
+		position: relative;
+
+		.icon {
+			position: absolute;
+			top: 40%;
+			right: 0;
+			transform: translateY(-50%);
+			cursor: pointer;
+			padding: 8px;
+			color: #757575;
+		}
+	}
+
+	.password {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.remember {
+			display: flex;
+			align-items: center;
+			position: relative;
+			font-size: 1.2rem;
+		}
+
+		.forgot {
+			font-size: 1.2rem;
+		}
+	}
+
+	.policy {
+		font-size: 1.4rem;
+		text-align: center;
+		color: #757575;
+		line-height: 1.8rem;
+		margin-top: 32px;
+		margin-bottom: 32px;
+
+		a {
+			font-size: 1.4rem;
+			color: #757575;
+		}
+	}
+
+	.submit {
+		width: 100%;
+		font-size: 2rem;
+		background-color: var(--black);
+		color: var(--white);
+		padding: 12px;
+		border-radius: 3px;
+	}
+}
+
+.remember {
+
+	/* Hide the browser's default checkbox */
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	/* Create a custom checkbox */
+	.check-mark {
+		position: absolute;
+		top: -2px;
+		left: 0;
+		height: 20px;
+		width: 20px;
+		background-color: #fff;
+		border: 1px solid var(--text-color);
+		border-radius: 4px;
+	}
+
+	/* Create the check-mark/indicator (hidden when not checked) */
+	.check-mark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	/* Show the check-mark when checked */
+	input:checked~.check-mark:after {
+		display: block;
+	}
+
+	/* Style the check-mark/indicator */
+	.check-mark:after {
+		left: 5px;
+		top: 2px;
+		width: 5px;
+		height: 8px;
+		border: solid var(--text-color);
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(35deg);
+		-ms-transform: rotate(35deg);
+		transform: rotate(35deg);
+	}
+
+	.text {
+		margin-left: 28px;
+	}
+}
+
+// Define animation
+@keyframes shake {
+
+	0% {
+		translate: 0;
+	}
+
+	100% {
+		translate: 0;
+	}
+
+	25% {
+		translate: 0.4rem;
+	}
+
+	75% {
+		translate: -0.4rem;
+	}
+}
+
+// Export animation
+:export {
+	shake: shake;
+}

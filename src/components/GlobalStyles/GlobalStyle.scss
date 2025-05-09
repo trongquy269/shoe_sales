@@ -1,0 +1,37 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --gray: #f5f5f5;
+    --text-color: #111;
+    --margin-distance: 48px;
+    --border-color: #e5e5e5;
+    --warning-text-color: #fe0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'roboto', arial, helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-rendering: optimizeLegibility;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+label {
+    user-select: none;
+}

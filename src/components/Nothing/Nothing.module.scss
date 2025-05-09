@@ -1,0 +1,14 @@
+.nothing {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    text-align: center;
+    color: #757575;
+
+    .nothing-icon {
+        font-size: 16rem;
+        margin-bottom: 40px;
+    }
+}
